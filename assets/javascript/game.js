@@ -111,8 +111,8 @@ function restart(){
     assignValue();
     newTarget();
     $("#targetNumber").text("Target number: " + targetNumber);
-    $("#userScore").text("Your current score is: " + userScore);
     userScore = 0;
+    $("#userScore").text("Your current score is: " + userScore);
 
     if (crystalOptions1 === crystalOptions2 || crystalOptions1 === crystalOptions3 || crystalOptions1===crystalOptions4){
         restart();
