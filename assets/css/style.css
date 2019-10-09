@@ -1,3 +1,33 @@
+body {
+    background-image: url("../images/linkimg.jpg");
+    background-size: 1550px 900px;
+    /* font-family:  */
+}
+
+div {
+    display: inline-block;
+    text-align:center;
+    margin: 50px 0px 0px 350px;
+    font-size: 30px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+     background-image: url("../images/triforce.jpg");
+    background-size: 40px;
+    border-style: solid;
+    border-color: gold;
+    border-width: 5px;
+}
+
+#targetNumber, #userScore, #wins, #losses{
+    width: 50%;
+}
+
+#crystals {
+    background-size: 300px;
+    width: 50%;
+}
+
 .crystal-image {
     width: 100px;
     height: 200px;

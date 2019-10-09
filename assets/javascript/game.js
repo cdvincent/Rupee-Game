@@ -1,7 +1,5 @@
 // generate random number to be guessed by user
 //initial call for numbers
-newTarget();
-assignValue();
 //random number generated from 1-120
 function newTarget(){
     targetNumber = Math.floor(Math.random() * 120 + 1);
@@ -20,6 +18,7 @@ let losses = 0;
 
 $("#targetNumber").text("Target number: " + targetNumber);
 
+restart();
 
 // make four crystals with a value between 1-12
 function assignValue(){
@@ -28,7 +27,7 @@ function assignValue(){
     crystalOptions3 = Math.floor(Math.random() * 12 + 1);
     crystalOptions4 = Math.floor(Math.random() * 12 + 1);
 
-
+ 
 // ****************************crystal 1**************************
 let crystal1 = $("<img>");
 
@@ -114,6 +113,22 @@ function restart(){
     $("#targetNumber").text("Target number: " + targetNumber);
     $("#userScore").text("Your current score is: " + userScore);
     userScore = 0;
+
+    if (crystalOptions1 === crystalOptions2 || crystalOptions1 === crystalOptions3 || crystalOptions1===crystalOptions4){
+        restart();
+    }
+
+    if (crystalOptions2 === crystalOptions3 || crystalOptions2 === crystalOptions4){
+        restart();
+    }
+
+    if (crystalOptions3 === crystalOptions4){
+        restart();
+    }
+    console.log(crystalOptions1);
+    console.log(crystalOptions2);
+    console.log(crystalOptions3);
+    console.log(crystalOptions4);
 }
 // restart should generate new random number, assign new values to crystals, reset score counter to 0
 
